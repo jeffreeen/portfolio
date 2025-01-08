@@ -1,6 +1,6 @@
 export const Logo = () => {
     return (  
-        <a href="/">
+        <a href="/public">
         </a> 
     );
 };
