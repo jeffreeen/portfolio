@@ -6,7 +6,12 @@ export const Main = () => {
     return (
         <StyledMain>
             <FlexContainer justify={"space-between"} align={"center"}>
-                <p>Hi 👋, My name is Pavan MG I build things for web</p>
+                <FlexContainer direction={"column"} align={"flex-start"}>
+                    <span>Hi 👋,</span>
+                    <span>My name is</span>
+                    <span>Pavan MG</span>
+                    <h1>I build things for web</h1>
+                </FlexContainer>
                 <PhotoMain src={photo}>
 
                 </PhotoMain>
