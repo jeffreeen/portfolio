@@ -20,6 +20,7 @@ const StyledMenu = styled.nav `
 display: flex;
 ul {
     display:flex;
+    align-items: center;
     gap: 50px;
 
 }
