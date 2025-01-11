@@ -12,7 +12,7 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header `
-    background-color: grey;
+    max-width: 1193px;
     display: flex;
     align-items: center;
     justify-content: space-between;
