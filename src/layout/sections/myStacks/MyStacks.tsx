@@ -1,12 +1,14 @@
+import styled from 'styled-components';
 import { FlexContainer } from '../../../components/FlexContainer';
 import { IconLogo } from '../../../components/icon/iconLogo'
+import { TitleSection } from '../../../components/TitleSection';
 
 export const MyStacks = () => {
     return (  
-        <div>
-            <h2>My Tech Stack</h2>
+        <StyledMyStacks>
+            <TitleSection>My Tech Stack</TitleSection>
             <p> Technologies I’ve been working with recently</p>
-            <FlexContainer>
+            <FlexContainer wrap='wrap' justify='space-between' align='center'>
                 <IconLogo iconId={'iconHtml'} width={'120px'} height={'120px'} viewBox={'0 0 120 120'}/>
                 <IconLogo iconId={'iconCss'} width={'120px'} height={'119px'} viewBox={'0 0 120 119'}/>
                 <IconLogo iconId={'iconJs'} width={'120px'} height={'120px'} viewBox={'0 0 120 120'}/>
@@ -21,6 +23,16 @@ export const MyStacks = () => {
                 <IconLogo iconId={'iconGithub'} width={'88px'} height={'88px'} viewBox={'0 0 88 88'}/>
             </FlexContainer>
 
-        </div>
+        </StyledMyStacks>
     );
 };
+
+const StyledMyStacks = styled.section `
+    max-width:1193px;
+    width:100%;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+`

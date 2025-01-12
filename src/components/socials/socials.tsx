@@ -1,9 +1,10 @@
-import { IconLogo } from "../icon/IconLogo";
+import styled from "styled-components";
+import { IconLogo } from "../icon/iconLogo";
 
 export const Socials = () => {
     return (  
         <nav>
-        <ul>
+        <StyledSocials>
             <li>
                 <a href="">
                     <IconLogo iconId={'gitLogo'} width={'30'} height={"30"} viewBox={"0 0 30 30"}/>
@@ -19,7 +20,11 @@ export const Socials = () => {
                     <IconLogo iconId={'linkLogo'} width={'30'} height={"30"} viewBox={"0 0 30 30"}/>
                 </a>
             </li>
-        </ul>
+        </StyledSocials>
     </nav>  
     );
 };
+
+const StyledSocials = styled.ul `
+    display: flex;
+`
