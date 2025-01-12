@@ -17,4 +17,5 @@ const StyledNavigation = styled.ul `
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 50px;
 `

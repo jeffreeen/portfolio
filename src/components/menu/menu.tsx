@@ -17,7 +17,5 @@ flex-wrap: wrap;
 ul {
     display:flex;
     align-items: center;
-    gap: 50px;
-
 }
 `

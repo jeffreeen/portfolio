@@ -27,4 +27,6 @@ export const Socials = () => {
 
 const StyledSocials = styled.ul `
     display: flex;
+    margin-left:51px;
+    gap: 20px;
 `
