@@ -8,51 +8,64 @@ import Rectangle23 from '../../../assets/images/Rectangle23.png'
 import Rectangle22 from '../../../assets/images/Rectangle22.png'
 import styled from "styled-components";
 import { TitleSection } from "../../../components/TitleSection";
+import { Theme } from "../../../styles/Theme";
+import { Container } from "../../../components/Container";
 
 
 export const MyProjects = () => {
-    return (  
-            <StyledMyProjects>
+    return (
+        <StyledMyProjects>
+            <Container>
                 <FlexContainer align="center" justify="center" direction="column">
-                <TitleSection>Projects</TitleSection>
-                <p>Things I’ve built so far</p>
-                <FlexContainer wrap="wrap" justify="space-between">
-                    <Project linkImage={Rectangle18} 
-                             title={'Project Tile goes here'} 
-                             description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} 
-                             stack={'HTML , JavaScript, SASS, React'} />
-                    <Project linkImage={Rectangle16} 
-                             title={'Project Tile goes here'} 
-                             description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} 
-                             stack={'HTML , JavaScript, SASS, React'} />
-                    <Project linkImage={Rectangle8} 
-                             title={'Project Tile goes here'} 
-                             description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} 
-                             stack={'HTML , JavaScript, SASS, React'} />
-                    <Project linkImage={Rectangle24} 
-                             title={'Project Tile goes here'} 
-                             description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} 
-                             stack={'HTML , JavaScript, SASS, React'} />
-                    <Project linkImage={Rectangle23} 
-                             title={'Project Tile goes here'} 
-                             description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} 
-                             stack={'HTML , JavaScript, SASS, React'} />
-                    <Project linkImage={Rectangle22} 
-                             title={'Project Tile goes here'} 
-                             description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'} 
-                             stack={'HTML , JavaScript, SASS, React'} />
+                    <TitleSection>Projects</TitleSection>
+                    <StyledDescription>Things I’ve built so far</StyledDescription>
+                    <FlexContainer wrap="wrap" justify="space-between" gap="65px 45px">
+                        <Project linkImage={Rectangle18}
+                            title={'Project Tile goes here'}
+                            description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
+                            stack={'HTML , JavaScript, SASS, React'} />
+                        <Project linkImage={Rectangle16}
+                            title={'Project Tile goes here'}
+                            description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
+                            stack={'HTML , JavaScript, SASS, React'} />
+                        <Project linkImage={Rectangle8}
+                            title={'Project Tile goes here'}
+                            description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
+                            stack={'HTML , JavaScript, SASS, React'} />
+                        <Project linkImage={Rectangle24}
+                            title={'Project Tile goes here'}
+                            description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
+                            stack={'HTML , JavaScript, SASS, React'} />
+                        <Project linkImage={Rectangle23}
+                            title={'Project Tile goes here'}
+                            description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
+                            stack={'HTML , JavaScript, SASS, React'} />
+                        <Project linkImage={Rectangle22}
+                            title={'Project Tile goes here'}
+                            description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
+                            stack={'HTML , JavaScript, SASS, React'} />
+                    </FlexContainer>
                 </FlexContainer>
-            </FlexContainer>
-            </StyledMyProjects>
+            </Container>
+        </StyledMyProjects>
     );
 };
 
-const StyledMyProjects = styled.section `
-    max-width:1193px;
+const StyledMyProjects = styled.section`
     width:100%;
     min-height:100vh;
      display: flex;
     flex-direction: column;
     align-items: space-between;
     justify-content: center;
+`
+
+const StyledDescription = styled.p`
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 81%;
+    text-align: center;
+    color: ${Theme.colors.colorGrey};
+    margin-bottom: 113px;
 `

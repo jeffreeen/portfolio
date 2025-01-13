@@ -9,5 +9,6 @@ export const TitleSection = styled.h2<TitlePropsType> `
     font-size: ${props => props.size || '48px'};
     font-weight: 700;
     text-align: center;
+    margin-bottom: 49px;
 `
 

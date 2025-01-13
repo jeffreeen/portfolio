@@ -16,9 +16,9 @@ export const Project = (props:ProjectPropsType) => {
     return (  
         <StyledProject>
             <StyledLinkImage src={props.linkImage} alt="backgroundProject" />
-            <FlexContainer direction="column">
-                <h3>{props.title || 'title undefined'}</h3>
-                <p>{props.description || 'description undefined'}</p>
+            <FlexContainer direction="column" padding="20px">
+                <StyledTitle>{props.title || 'title undefined'}</StyledTitle>
+                <StyledProjectDescription>{props.description || 'description undefined'}</StyledProjectDescription>
                 <span>Tech Stack:{props.stack || 'stack undefined'}</span>
                 <FlexContainer>
                     <FlexContainer>
@@ -38,8 +38,30 @@ export const Project = (props:ProjectPropsType) => {
 const StyledProject = styled.div `
     max-width: 30%;
     max-height: 567px;
+    background: #363636;
+    border-radius: 20px;
+
 `
 
+const StyledProjectDescription = styled.p `
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 144%;
+    color: #ccc;
+    text-align: start;
+    margin-bottom: 12px;
+`
+
+const StyledTitle = styled.h3 `
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 93%;
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 17px;
+`
 const StyledLinkImage = styled.img `
     width:100%;
 `
