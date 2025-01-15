@@ -7,12 +7,12 @@ type FlexContainerPropsType = {
     wrap?: string
     gap?: string
     padding?: string
+    width?: string
 }
 
 export const FlexContainer = styled.div<FlexContainerPropsType> `
     display: flex;
-    width:100%;
-    height: 100%;
+    max-width:${props => props.width || '100%'};;
     flex-direction: ${props => props.direction || 'row'};
     justify-content: ${props => props.justify || 'flex-start'};
     align-items: ${props => props.align || 'stretch'};

@@ -1,34 +1,39 @@
 import styled from "styled-components";
 import { FlexContainer } from "../../../components/FlexContainer";
 import { TitleSection } from "../../../components/TitleSection";
-import { Logo } from "../../../components/logo/logo";
 import { Socials } from "../../../components/socials/socials";
+import { Container } from "../../../components/Container";
+import { IconLogo } from "../../../components/icon/iconLogo";
 
 export const Contacts = () => {
     return (
         <StyledContacts>
-            <FlexContainer direction="column" align="center" justify="center">
-            <TitleSection size="55px">For any questions please mail me:</TitleSection>
-            <StyledMailLink href="mailto:zdrobotovjeffren@mail.ru">zdrobotovjeffren@mail.ru</StyledMailLink>
-            <FlexContainer align="center" justify="space-between">
-                <Logo/>
-                <a href="tel:+911234509876">+91 12345 09876</a>
-                <a href="mailto:info@example.com">info@example.com</a>
-                <Socials/>
-            </FlexContainer>
-        </FlexContainer>  
+            <Container>
+                <FlexContainer direction="column" align="center" justify="center">
+                    <TitleSection size="55px" marginBottom='9px'>For any questions please mail me:</TitleSection>
+                    <StyledMailLink href="mailto:zdrobotovjeffren@mail.ru">zdrobotovjeffren@mail.ru</StyledMailLink>
+                    <FlexContainer align="center" justify="space-between">
+                        <IconLogo iconId={'logo'}/>
+                        <FlexContainer align="center" justify="flex-end">
+                            <StyledContactLink href="tel:+911234509876">+91 12345 09876</StyledContactLink>
+                            <StyledContactLink href="mailto:info@example.com">info@example.com</StyledContactLink>
+                            <Socials/>
+                        </FlexContainer>
+                    </FlexContainer>
+                </FlexContainer>  
+            </Container>
         </StyledContacts>
         
     );
 };
 
 const StyledContacts = styled.section `
-    max-width:1193px;
     width:100%;
     display: flex;
-    flex-direction: column;
-    align-items: space-between;
+    flex-direction: column;;
     justify-content: center;
+    margin-top: 178px;
+    margin-bottom:42px;
 `
 
 const StyledMailLink = styled.a `
@@ -40,4 +45,12 @@ const StyledMailLink = styled.a `
     font-weight: 700;
     letter-spacing: -1px;
     text-align: center;
+    margin-bottom: 211px;
+`
+const StyledContactLink = styled.a `
+    font-family: "DM Sans";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 144%;
+    margin-left: 33px;
 `

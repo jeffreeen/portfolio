@@ -8,8 +8,8 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-            <FlexContainer direction="row" justify={"space-between"} align={"center"} >
-                <FlexContainer direction={"column"} align={"flex-start"}>
+            <FlexContainer direction="row" justify={"space-between"} align={"center"} wrap={"wrap"}  >
+                <FlexContainer direction={"column"} align={"flex-start"} width={'53%'}>
                     <StyledSpan>Hi 👋,</StyledSpan>
                     <StyledSpan>My name is</StyledSpan>
                     <StyledSpan><StyledSpanGradient>Pavan MG</StyledSpanGradient></StyledSpan>
@@ -25,8 +25,6 @@ export const Main = () => {
 
 
 const StyledMain = styled.section `
-    min-height:100vh;
-    max-width:1193px;
     width:100%;
     display: flex;
     flex-direction: column;
@@ -34,8 +32,7 @@ const StyledMain = styled.section `
     justify-content: center;
 `;
 const PhotoMain = styled.img `
-    width: 349px;
-    height: 349px;
+    max-width: 30%;
     margin: 140px 100px 139px 100px;
     object-fit: cover;
     top: 19px;

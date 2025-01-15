@@ -18,6 +18,10 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
     width: 100%;
     font-family: DM Sans;
     font-size: 20px;

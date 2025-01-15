@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { FlexContainer } from "../FlexContainer"
 import { IconLogo } from "../icon/iconLogo"
+import { Theme } from "../../styles/Theme"
 
 
 type ProjectPropsType = {
@@ -19,15 +20,15 @@ export const Project = (props:ProjectPropsType) => {
             <FlexContainer direction="column" padding="20px">
                 <StyledTitle>{props.title || 'title undefined'}</StyledTitle>
                 <StyledProjectDescription>{props.description || 'description undefined'}</StyledProjectDescription>
-                <span>Tech Stack:{props.stack || 'stack undefined'}</span>
-                <FlexContainer>
-                    <FlexContainer>
+                <StyledListStacks>Tech Stack : <span>{props.stack || 'stack undefined'}</span></StyledListStacks>
+                <FlexContainer justify="space-between" align="start">
+                    <FlexContainer justify="center" align="center">
                         <IconLogo iconId={'iconLinkChain'} width={'20px'} height={'20px'} viewBox={'0 0 20 20'}/>
-                        <a href={props.linkLivePreview || 'undefined'}>Live Preview</a>
+                        <StyledProjectLink href={props.linkLivePreview || 'undefined'}>Live Preview</StyledProjectLink>
                     </FlexContainer>
-                    <FlexContainer>
+                    <FlexContainer justify="center" align="center">
                         <IconLogo iconId={'gitSmall'} width={'20px'} height={'20px'} viewBox={'0 0 20 20'}/>
-                        <a href={props.linkViewCode || 'undefined'}>View Code</a>
+                        <StyledProjectLink href={props.linkViewCode || 'undefined'}>View Code</StyledProjectLink>
                     </FlexContainer> 
                 </FlexContainer>
             </FlexContainer>
@@ -37,14 +38,12 @@ export const Project = (props:ProjectPropsType) => {
 
 const StyledProject = styled.div `
     max-width: 30%;
-    max-height: 567px;
     background: #363636;
     border-radius: 20px;
 
 `
 
 const StyledProjectDescription = styled.p `
-    font-family: 'Poppins';
     font-weight: 300;
     font-size: 18px;
     line-height: 144%;
@@ -53,15 +52,39 @@ const StyledProjectDescription = styled.p `
     margin-bottom: 12px;
 `
 
+const StyledListStacks = styled.span `
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    color: ${Theme.colors.colorTitle};
+    text-align: start;
+    margin-bottom: 21px;
+
+    span {
+        font-weight: 300;
+        font-size: 14px;
+    }
+`
+
 const StyledTitle = styled.h3 `
-    font-family: 'Poppins';
     font-weight: 500;
     font-size: 28px;
     line-height: 93%;
     text-align: center;
-    color: #ccc;
+    color: ${Theme.colors.colorTitle};
     margin-bottom: 17px;
 `
 const StyledLinkImage = styled.img `
     width:100%;
+`
+
+const StyledProjectLink = styled.a `
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    text-decoration-skip-ink: none;
+    color: ${Theme.colors.colorWhiteLink};
+    text-decoration: underline;
+    margin-left: 12px;
+    margin-right:20px;
 `

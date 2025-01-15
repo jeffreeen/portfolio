@@ -53,11 +53,11 @@ export const MyProjects = () => {
 
 const StyledMyProjects = styled.section`
     width:100%;
-    min-height:100vh;
-     display: flex;
+    display: flex;
     flex-direction: column;
     align-items: space-between;
     justify-content: center;
+    margin-top: 214px;
 `
 
 const StyledDescription = styled.p`

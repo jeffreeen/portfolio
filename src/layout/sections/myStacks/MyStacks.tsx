@@ -42,7 +42,6 @@ const StyledDescription = styled.p`
 
 const StyledMyStacks = styled.section`
     width:100%;
-    min-height:100vh;
     display: flex;
     flex-direction: column;
     align-items: space-between;
