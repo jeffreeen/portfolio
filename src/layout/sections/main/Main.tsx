@@ -10,17 +10,32 @@ export const Main = () => {
             <Container>
             <FlexContainer direction="row" justify={"space-between"} align={"center"} wrap={"wrap"}  >
                 <FlexContainer direction={"column"} align={"flex-start"} width={'53%'}>
+                    <StyledTitleMain>Frontend developer</StyledTitleMain>
                     <StyledSpan>Hi 👋,</StyledSpan>
                     <StyledSpan>My name is</StyledSpan>
                     <StyledSpan><StyledSpanGradient>Pavan MG</StyledSpanGradient></StyledSpan>
                     <StyledSpan>I build things for web</StyledSpan>
                 </FlexContainer>
-                <PhotoMain src={photo}/>
+                <StyledWrapperPhoto>
+                    <PhotoMain src={photo}/>
+                </StyledWrapperPhoto>
             </FlexContainer>
             </Container>
         </StyledMain>
     );
 };
+
+const StyledWrapperPhoto = styled.div `
+    margin: 140px 0px 139px 0px;
+    background: linear-gradient(180deg, #E70FAA 0%, #00C0FD 100%);
+    border-radius: 50%;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+    position: relative;
+`
 
 
 
@@ -32,14 +47,11 @@ const StyledMain = styled.section `
     justify-content: center;
 `;
 const PhotoMain = styled.img `
-    max-width: 30%;
-    margin: 140px 100px 139px 100px;
+    max-width: 357px;
+    max-height: 357px;
+    padding: 9px;
     object-fit: cover;
-    top: 19px;
-    left: 834px;
-    border-radius: 230px;
-    border: 9px solid transparent;
-    background-image: linear-gradient(180deg, #E70FAA -9px, #00C0FD 100%);
+    border-radius: 50%;
 `
 const StyledSpan = styled.span `
     font-family : "Poppins";
@@ -55,6 +67,10 @@ const StyledSpanGradient = styled.span `
     background: linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%);
     color: transparent;
     background-clip: text;
+`
+
+const StyledTitleMain = styled.h1 `
+    display: none;
 `
 
 

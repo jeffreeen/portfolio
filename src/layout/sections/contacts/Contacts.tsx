@@ -12,9 +12,9 @@ export const Contacts = () => {
                 <FlexContainer direction="column" align="center" justify="center">
                     <TitleSection size="55px" marginBottom='9px'>For any questions please mail me:</TitleSection>
                     <StyledMailLink href="mailto:zdrobotovjeffren@mail.ru">zdrobotovjeffren@mail.ru</StyledMailLink>
-                    <FlexContainer align="center" justify="space-between">
+                    <FlexContainer align="center" justify="space-between" width="100%">
                         <IconLogo iconId={'logo'}/>
-                        <FlexContainer align="center" justify="flex-end">
+                        <FlexContainer align="center" justify="flex-end" >
                             <StyledContactLink href="tel:+911234509876">+91 12345 09876</StyledContactLink>
                             <StyledContactLink href="mailto:info@example.com">info@example.com</StyledContactLink>
                             <Socials/>
