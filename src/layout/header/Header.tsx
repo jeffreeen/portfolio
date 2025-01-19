@@ -1,15 +1,15 @@
 import styled from "styled-components";
-import { Logo } from "../../components/logo/logo";
 import { Menu } from "../../components/menu/menu";
 import { Container } from "../../components/Container";
 import { FlexContainer } from "../../components/FlexContainer";
+import LogoGradient from '../../assets/images/logo 1.png'
 
 export const Header = () => {
     return (
         <StyledHeader>
             <Container>
                 <FlexContainer wrap="wrap" align="center" justify="space-between">
-                    <Logo />
+                    <img src={LogoGradient} alt="logo" />
                     <Menu />
                 </FlexContainer>
             </Container>

@@ -3,13 +3,14 @@ import photo from '../../../../src/assets/images/MyPhoto.jpg'
 import { FlexContainer } from "../../../components/FlexContainer";
 import { Theme } from "../../../styles/Theme";
 import { Container } from "../../../components/Container";
+import { IconLogo } from "../../../components/icon/iconLogo";
 
 export const Main = () => {
     return (
         <StyledMain>
             <Container>
-            <FlexContainer direction="row" justify={"space-between"} align={"center"} wrap={"wrap"}  >
-                <FlexContainer direction={"column"} align={"flex-start"} width={'53%'}>
+            <FlexContainer direction="row" justify={"space-between"} align={"center"} wrap={"wrap"} >
+                <FlexContainer direction={"column"} align={"flex-start"} justify="center">
                     <StyledTitleMain>Frontend developer</StyledTitleMain>
                     <StyledSpan>Hi 👋,</StyledSpan>
                     <StyledSpan>My name is</StyledSpan>
@@ -17,6 +18,7 @@ export const Main = () => {
                     <StyledSpan>I build things for web</StyledSpan>
                 </FlexContainer>
                 <StyledWrapperPhoto>
+                    <IconLogo iconId="abstractForPhoto" width="628px" height="628px" viewBox="0 0 628 628"/>
                     <PhotoMain src={photo}/>
                 </StyledWrapperPhoto>
             </FlexContainer>
@@ -35,17 +37,32 @@ const StyledWrapperPhoto = styled.div `
     align-items: space-between;
     justify-content: center;
     position: relative;
+
+    svg {
+    position:absolute;
+    transform: translate(-20%, 0%);
+    z-index: -1;
+    }
+
 `
+   
 
 
 
 const StyledMain = styled.section `
     width:100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: space-between;
+    align-items: center;
     justify-content: center;
-`;
+
+     >div {
+        >div {
+            height: 100%;
+        }
+    }
+`
 const PhotoMain = styled.img `
     max-width: 357px;
     max-height: 357px;

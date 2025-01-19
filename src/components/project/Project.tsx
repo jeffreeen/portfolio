@@ -22,11 +22,11 @@ export const Project = (props:ProjectPropsType) => {
                 <StyledProjectDescription>{props.description || 'description undefined'}</StyledProjectDescription>
                 <StyledListStacks>Tech Stack : <span>{props.stack || 'stack undefined'}</span></StyledListStacks>
                 <FlexContainer justify="space-between" align="start">
-                    <FlexContainer justify="center" align="center">
+                    <FlexContainer justify="center" >
                         <IconLogo iconId={'iconLinkChain'} width={'20px'} height={'20px'} viewBox={'0 0 20 20'}/>
                         <StyledProjectLink href={props.linkLivePreview || 'undefined'}>Live Preview</StyledProjectLink>
                     </FlexContainer>
-                    <FlexContainer justify="center" align="center">
+                    <FlexContainer justify="center" >
                         <IconLogo iconId={'gitSmall'} width={'20px'} height={'20px'} viewBox={'0 0 20 20'}/>
                         <StyledProjectLink href={props.linkViewCode || 'undefined'}>View Code</StyledProjectLink>
                     </FlexContainer> 
@@ -87,4 +87,5 @@ const StyledProjectLink = styled.a `
     text-decoration: underline;
     margin-left: 12px;
     margin-right:20px;
+    margin-bottom: 25px;
 `

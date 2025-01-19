@@ -12,7 +12,7 @@ export const Contacts = () => {
                 <FlexContainer direction="column" align="center" justify="center">
                     <TitleSection size="55px" marginBottom='9px'>For any questions please mail me:</TitleSection>
                     <StyledMailLink href="mailto:zdrobotovjeffren@mail.ru">zdrobotovjeffren@mail.ru</StyledMailLink>
-                    <FlexContainer align="center" justify="space-between" width="100%">
+                    <FlexContainer align="center" justify="space-between">
                         <IconLogo iconId={'logo'}/>
                         <FlexContainer align="center" justify="flex-end" >
                             <StyledContactLink href="tel:+911234509876">+91 12345 09876</StyledContactLink>
@@ -30,8 +30,9 @@ export const Contacts = () => {
 const StyledContacts = styled.section `
     width:100%;
     display: flex;
-    flex-direction: column;;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-top: 178px;
     margin-bottom:42px;
 `

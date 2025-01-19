@@ -19,7 +19,7 @@ export const MyProjects = () => {
                 <FlexContainer align="center" justify="center" direction="column">
                     <TitleSection>Projects</TitleSection>
                     <StyledDescription>Things I’ve built so far</StyledDescription>
-                    <FlexContainer wrap="wrap" justify="space-between" gap="65px 45px">
+                    <GridContainer>
                         <Project linkImage={Rectangle18}
                             title={'Project Tile goes here'}
                             description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
@@ -44,7 +44,7 @@ export const MyProjects = () => {
                             title={'Project Tile goes here'}
                             description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}
                             stack={'HTML , JavaScript, SASS, React'} />
-                    </FlexContainer>
+                    </GridContainer>
                 </FlexContainer>
             </Container>
         </StyledMyProjects>
@@ -58,6 +58,15 @@ const StyledMyProjects = styled.section`
     align-items: space-between;
     justify-content: center;
     margin-top: 214px;
+`
+
+const GridContainer = styled.div `
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(373px, 373px));
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 65px;
+    column-gap: 50px;
+    justify-items: center;
 `
 
 const StyledDescription = styled.p`

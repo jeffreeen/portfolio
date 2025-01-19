@@ -1,4 +1,3 @@
-import styled from 'styled-components'
 import IconSprite from '../../assets/images/sprite.svg'
 import { Theme } from '../../styles/Theme'
 

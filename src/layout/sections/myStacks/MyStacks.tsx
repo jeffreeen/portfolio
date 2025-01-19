@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { FlexContainer } from '../../../components/FlexContainer';
 import { IconLogo } from '../../../components/icon/iconLogo'
 import { TitleSection } from '../../../components/TitleSection';
 import { Container } from '../../../components/Container';
@@ -11,7 +10,7 @@ export const MyStacks = () => {
             <Container>
                 <TitleSection>My Tech Stack</TitleSection>
                 <StyledDescription> Technologies I’ve been working with recently</StyledDescription>
-                <FlexContainer wrap='wrap' justify='space-between' align='center' gap='100px'>
+                <GridContainer>
                     <IconLogo iconId={'iconHtml'} width={'120px'} height={'120px'} viewBox={'0 0 120 120'} />
                     <IconLogo iconId={'iconCss'} width={'120px'} height={'119px'} viewBox={'0 0 120 119'} />
                     <IconLogo iconId={'iconJs'} width={'120px'} height={'120px'} viewBox={'0 0 120 120'} />
@@ -24,11 +23,20 @@ export const MyStacks = () => {
                     <IconLogo iconId={'iconGreensock'} width={'120px'} height={'120px'} viewBox={'0 0 120 120'} />
                     <IconLogo iconId={'iconVsCode'} width={'112px'} height={'112px'} viewBox={'0 0 112 112'} />
                     <IconLogo iconId={'iconGithub'} width={'88px'} height={'88px'} viewBox={'0 0 88 88'} />
-                </FlexContainer>
+                </GridContainer>
             </Container>
         </StyledMyStacks>
     );
 };
+
+const GridContainer = styled.div `
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, auto));
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 100px;
+    column-gap: 100px;
+    justify-items: center;
+`
 
 const StyledDescription = styled.p`
     font-family: "Poppins";
