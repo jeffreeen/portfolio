@@ -17,7 +17,7 @@ export const Project = (props:ProjectPropsType) => {
     return (  
         <StyledProject>
             <StyledLinkImage src={props.linkImage} alt="backgroundProject" />
-            <FlexContainer direction="column" padding="20px">
+            <FlexContainer direction="column">
                 <StyledTitle>{props.title || 'title undefined'}</StyledTitle>
                 <StyledProjectDescription>{props.description || 'description undefined'}</StyledProjectDescription>
                 <StyledListStacks>Tech Stack : <span>{props.stack || 'stack undefined'}</span></StyledListStacks>
@@ -37,15 +37,22 @@ export const Project = (props:ProjectPropsType) => {
 };
 
 const StyledProject = styled.div `
-    max-width: 30%;
     background: #363636;
     border-radius: 20px;
+
+    > div {
+        padding: 20px;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
 
 `
 
 const StyledProjectDescription = styled.p `
     font-weight: 300;
-    font-size: 18px;
+    font-size: calc((100vw - 320px)/(1600 - 320)*(18 - 16) + 16px);;
     line-height: 144%;
     color: #ccc;
     text-align: start;
@@ -68,7 +75,7 @@ const StyledListStacks = styled.span `
 
 const StyledTitle = styled.h3 `
     font-weight: 500;
-    font-size: 28px;
+    font-size: calc((100vw - 320px)/(1600 - 320)*(28 - 18) + 18px);;
     line-height: 93%;
     text-align: center;
     color: ${Theme.colors.colorTitle};

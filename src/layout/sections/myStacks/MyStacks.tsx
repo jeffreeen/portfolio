@@ -41,7 +41,7 @@ const GridContainer = styled.div `
 const StyledDescription = styled.p`
     font-family: "Poppins";
     font-weight: 400;
-    font-size: 32px;
+    font-size: calc((100vw - 320px)/(1600 - 320)*(38 - 16) + 16px);
     line-height: 81%;
     text-align: center;
     color: ${Theme.colors.colorGrey};

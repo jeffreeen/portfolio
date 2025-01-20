@@ -62,17 +62,19 @@ const StyledMyProjects = styled.section`
 
 const GridContainer = styled.div `
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(373px, 373px));
+    grid-template-columns: repeat(auto-fill, minmax(auto, 370px));
     grid-template-rows: repeat(2, 1fr);
-    row-gap: 65px;
-    column-gap: 50px;
-    justify-items: center;
+    width:100%;
+    row-gap: 50px;
+    column-gap: calc((100vw - 320px)/(1600 - 320)*(32 - 10) + 10px);;
+    justify-content: center;
+    margin: 0 auto;
 `
 
 const StyledDescription = styled.p`
     font-family: "Poppins";
     font-weight: 400;
-    font-size: 32px;
+    font-size: calc((100vw - 320px)/(1600 - 320)*(38 - 16) + 16px);
     line-height: 81%;
     text-align: center;
     color: ${Theme.colors.colorGrey};

@@ -8,7 +8,7 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <Container>
-                <FlexContainer align="center" justify="space-between">
+                <FlexContainer align="center" justify="space-between" wrap="wrap">
                     <Navigation/>
                     <Copiright>Designed and built by <StyledGradient>Pavan MG</StyledGradient> with <StyledGradient>Love</StyledGradient> & <StyledGradient>Coffee</StyledGradient></Copiright>
                 </FlexContainer>
@@ -20,9 +20,13 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer `
     width:100%;
-    padding-top:40px;
-    padding-bottom:40px;
-    border-top: 1px solid #42446E;
+    
+    
+    > div {
+        border-top: 1px solid #42446E; 
+        padding-top:40px;
+        padding-bottom:40px;
+    }
 `
 
 const Copiright = styled.small `

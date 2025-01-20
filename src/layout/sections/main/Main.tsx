@@ -38,10 +38,19 @@ const StyledWrapperPhoto = styled.div `
     justify-content: center;
     position: relative;
 
+     
+    @media screen and (max-width: 1200px) {
+        margin: 0;
+        } 
+
     svg {
     position:absolute;
     transform: translate(-20%, 0%);
     z-index: -1;
+        
+        @media screen and (max-width: 1200px) {
+        display:none;
+        } 
     }
 
 `
@@ -51,15 +60,22 @@ const StyledWrapperPhoto = styled.div `
 
 const StyledMain = styled.section `
     width:100%;
+    max-width:1193px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
-     >div {
-        >div {
+     > div {
+        width:100%;
+        > div {
             height: 100%;
+            width:100%;
+            
+            @media screen and (max-width: 576px) {
+                justify-content: center;
+        } 
         }
     }
 `
@@ -69,14 +85,21 @@ const PhotoMain = styled.img `
     padding: 9px;
     object-fit: cover;
     border-radius: 50%;
+
+    @media screen and (max-width: 782px) {
+        max-width: 257px;
+        max-height: 257px;
+        } 
 `
 const StyledSpan = styled.span `
     font-family : "Poppins";
     font-weight: bold;
-    font-size: 58px;
+    font-size: calc((100vw - 320px)/(1600 - 320)*(58 - 28) + 28px);
     color: ${Theme.colors.colorWhite};
     leter-spacing: -1px;
     line-height: 70px;
+
+    
     
 
 `

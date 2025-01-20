@@ -18,13 +18,24 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-    position: fixed;
-    top: 0;
-    left:0;
-    right:0;
     width: 100%;
     font-family: DM Sans;
     font-size: 20px;
     font-weight: 500;
     margin-top:41px;
+
+    > div {
+        > div {
+            @media screen and (max-width: 576px) {
+            flex-direction: column;
+            align-items: center;
+        }  
+        } 
+    }
+
+    @media screen and (max-width: 1200px) {
+        margin-top: 10px;
+        } 
+
+   
 `

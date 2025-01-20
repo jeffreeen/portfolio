@@ -27,14 +27,18 @@ const StyledNavigation = styled.ul `
         a{
             color: blue;
         }
-    
     }
+    }
+    
+    @media screen and (max-width: 1200px) {
+        gap: 10px;
+        } 
 `
 
 const StyledLinkText = styled.a `
     font-family:'DM Sans';
     font-weight: 500;
-    font-size: 20px;
+    font-size: calc((100vw - 320px)/(1600 - 320)*(20 - 16) + 16px);;
     line-height: 130%;
     text-align: center;
     color: ${Theme.colors.colorGrey};
