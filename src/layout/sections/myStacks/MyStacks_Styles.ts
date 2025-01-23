@@ -4,10 +4,9 @@ import { Theme } from "../../../styles/Theme"
 const GridContainer = styled.div `
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(110px, auto));
-    grid-template-rows: repeat(2, 1fr);
     row-gap: 100px;
     column-gap: 100px;
-    justify-items: center;
+    justify-content: center;
 `
 
 const StyledDescription = styled.p`

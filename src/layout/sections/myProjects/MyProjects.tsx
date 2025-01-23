@@ -50,7 +50,7 @@ const projectData = [
     }
 ]
 
-export const MyProjects: React.FC = () => {
+export const MyProjects = () => {
     return (
         <S.StyledMyProjects>
             <Container>
@@ -58,8 +58,8 @@ export const MyProjects: React.FC = () => {
                     <TitleSection>Projects</TitleSection>
                     <S.StyledDescription>Things I’ve built so far</S.StyledDescription>
                     <S.GridContainer>
-                        {projectData.map((p)=>{
-                            return  <Project linkImage={p.linkImage}
+                        {projectData.map((p, index)=>{
+                            return  <Project key={index} linkImage={p.linkImage}
                                             title={p.title}
                                             description={p.description}
                                             stack={p.stack} />

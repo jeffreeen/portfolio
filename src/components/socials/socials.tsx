@@ -25,7 +25,7 @@ const socialsData = [
     }
 ]
 
-export const Socials = () => {
+export const Socials:React.FC = () => {
     return (  
         <nav>
         <S.StyledSocials>
