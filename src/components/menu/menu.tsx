@@ -1,26 +1,15 @@
-import styled from "styled-components";
-import { Socials } from "../socials/socials";
+import { Socials } from "../socials/Socials";
 import { Navigation } from "../navigation/Navigation";
+import { M } from "./Menu_Styles";
 
-export const Menu = () => {
+const navigationData = ['Home','About','Tech Stack','Projects','Contact']
+
+export const Menu:React.FC = () => {
     return (  
-    <StyledMenu>
-        <Navigation/>
+    <M.StyledMenu>
+        <Navigation dataNavigation={navigationData}/>
         <Socials/>
-    </StyledMenu>
+    </M.StyledMenu>
     );
 };
 
-const StyledMenu = styled.nav `
-display: flex;
-flex-wrap: wrap;
-ul {
-    display:flex;
-    align-items: center;
-}
-
-@media screen and (max-width: 576px) {
-        flex-direction: column;
-        align-items: center;
-        } 
-`

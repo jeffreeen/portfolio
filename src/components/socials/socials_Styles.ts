@@ -10,6 +10,13 @@ const StyledSocials = styled.ul `
         } 
 `
 
+const StyledSocialItem= styled.li `
+    &:hover {
+        transform: scale(1.1);
+    }
+`
+
 export const S = {
-    StyledSocials 
+    StyledSocials,
+    StyledSocialItem
 }

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { FlexContainer } from "../FlexContainer"
-import { IconLogo } from "../icon/iconLogo"
+import { IconLogo } from "../icon/IconLogo"
 import { Theme } from "../../styles/Theme"
 
 

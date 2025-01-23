@@ -4,12 +4,14 @@ import { Navigation } from "../../components/navigation/Navigation";
 import { Container } from "../../components/Container";
 import { Theme } from "../../styles/Theme";
 
+const navigationData = ['Home','About','Tech Stack','Projects','Contact']
+
 export const Footer = () => {
     return (
         <StyledFooter>
             <Container>
                 <FlexContainer align="center" justify="space-between" wrap="wrap">
-                    <Navigation/>
+                    <Navigation dataNavigation={navigationData}/>
                     <Copiright>Designed and built by <StyledGradient>Pavan MG</StyledGradient> with <StyledGradient>Love</StyledGradient> & <StyledGradient>Coffee</StyledGradient></Copiright>
                 </FlexContainer>
             </Container>

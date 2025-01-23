@@ -1,5 +1,5 @@
-import { IconLogo } from "../icon/iconLogo";
-import { S } from "./socials_Styles";
+import { IconLogo } from "../icon/IconLogo";
+import { S } from "./Socials_Styles";
 
 const socialsData = [
     {
@@ -29,12 +29,12 @@ export const Socials = () => {
     return (  
         <nav>
         <S.StyledSocials>
-            {socialsData.map((s)=> {
-                return <li>
+            {socialsData.map((s, index)=> {
+                return <S.StyledSocialItem key={index}>
                             <a href={s.href}>
                                 <IconLogo iconId={s.iconId} width={s.width} height={s.height} viewBox={s.viewBox}/>
                             </a>
-                        </li>
+                        </S.StyledSocialItem>
             })}
         </S.StyledSocials>
     </nav>  

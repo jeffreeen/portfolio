@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { FlexContainer } from "../../../components/FlexContainer";
 import { TitleSection } from "../../../components/TitleSection";
-import { Socials } from "../../../components/socials/socials";
+import { Socials } from "../../../components/socials/Socials";
 import { Container } from "../../../components/Container";
-import { IconLogo } from "../../../components/icon/iconLogo";
+import { IconLogo } from "../../../components/icon/IconLogo";
 
 export const Contacts = () => {
     return (

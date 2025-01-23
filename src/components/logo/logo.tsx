@@ -1,4 +1,4 @@
-import { IconLogo } from "../icon/iconLogo"
+import { IconLogo } from "../icon/IconLogo"
 
 
 export const Logo = () => {
